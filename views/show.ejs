@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Fruits show page</h1>
+    The <%=fruit.name %> is <%=fruit.color %>. 
+    <% if(fruit.readyToEat){ %> 
+        Ready to Eat! 🤤
+    <% } else { %> 
+        Fruit is no good 😬
+    <% }%>
+    <br>
+    <br>
+    <button><a href='/fruits'>BACK</a></button>
+    <form action='/fruits/<%=id%>?_method=DELETE' method=POST>
+      <button type='submit'>DELETE</button>
+    </form>
+    <button><a href='/fruits/<%=id%>/edit'>Edit</a></button>
+    <img src="<%= giphId %>" alt="">
+  </body>
+</html>

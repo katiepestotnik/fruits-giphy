@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head')%>
+  <body>
+    <h1>Fruits Index Page</h1>
+    <ul>
+       
+        <% fruits.forEach((fruit, i)=>{%>
+            <li>
+                <a href='/fruits/<%= i %>'><%= fruits[i].name %> 
+                        <img src=<%= giphyArr[i]%>/></a>
+
+                    
+            </li>
+        <%})%>
+    </ul><br>
+    <a href='fruits/new'>CREATE NEW FRUIT</a>
+</html>
